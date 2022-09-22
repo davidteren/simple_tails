@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    @apply text-[18.4px];
+  }
+
+  body {
+    @apply m-0 grid bg-gray-900;
+    grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  }
+
+  body > * {
+    grid-column: 2;
+  }
+
+  .simple-prose {
+    @apply /*prose-p:text-[18.4px]*/
+      /*prose-li:text-red-400*/
+    prose
+    prose-headings:my-6
+    prose-headings:break-words
+    prose-headings:font-bold
+    prose-headings:leading-tight
+    prose-headings:text-white
+    prose-h1:sm:text-[3rem]
+    prose-h1:text-[2.5rem]
+    prose-h2:sm:text-[2.6rem]
+    prose-h2:text-[2.1rem]
+    prose-h3:sm:text-[2rem]
+    prose-h3:text-[1.75rem]
+    prose-h4:text-[1.44rem]
+    prose-h4:sm:text-[1.25rem]
+    prose-h5:text-[1.15rem]
+    prose-h6:text-[0.96rem]
+    prose-p:text-white
+    prose-a:text-blue-400
+    prose-blockquote:mx-24
+    prose-blockquote:font-extralight
+    prose-blockquote:text-white
+    prose-figcaption:text-center
+    prose-strong:text-white
+    prose-code:bg-gray-800
+    prose-code:font-mono
+    prose-code:font-extralight
+    prose-code:text-gray-300
+    prose-pre:font-mono
+    prose-pre:font-extralight
+    prose-pre:text-gray-400
+    prose-ol:text-gray-300
+    prose-ul:text-gray-300
+    prose-table:text-gray-300
+    prose-img:mx-auto
+    prose-hr:my-0;
+  }
+
+  .prose main {
+    @apply mt-12;
+  }
+
+  textarea,
+  select,
+  input,
+  progress {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    @apply break-words;
+  }
+
+  .simple-prose nav {
+    @apply mt-4 flex flex-col  text-xl  sm:mx-12 sm:flex-row sm:justify-between sm:text-2xl;
+  }
+
+  .simple-prose label {
+    @apply block;
+  }
+
+  .simple-prose textarea,
+  .simple-prose select,
+  .simple-prose input[type="button"],
+  .simple-prose input[type="color"],
+  .simple-prose input[type="date"],
+  .simple-prose input[type="datetime-local"],
+  .simple-prose input[type="email"],
+  .simple-prose input[type="file"],
+  .simple-prose input[type="hidden"],
+  .simple-prose input[type="image"],
+  .simple-prose input[type="month"],
+  .simple-prose input[type="number"],
+  .simple-prose input[type="password"],
+  .simple-prose input[type="range"],
+  .simple-prose input[type="reset"],
+  .simple-prose input[type="search"],
+  .simple-prose input[type="submit"],
+  .simple-prose input[type="tel"],
+  .simple-prose input[type="text"],
+  .simple-prose input[type="time"],
+  .simple-prose input[type="url"],
+  .simple-prose input[type="week"] {
+    @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
+    text-white md:w-3/5;
+  }
+
+  .simple-prose button {
+    @apply my-2 mx-1 rounded bg-gray-300 py-3 px-4 text-center font-sans text-base
+    text-neutral-800 hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
+  } {
+  @apply w-full rounded-md border-2 border-red-300 bg-yellow-200 py-2 px-4
+}
+  input[type="range"] {
+    outline: 0;
+    border: 0;
+    border-radius: 500px;
+    width: 400px;
+    max-width: 100%;
+    margin: 2px 0 1px;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    html input[type="range"] {
+      overflow: hidden;
+      height: 40px;
+    }
+
+    html input[type="range"]::-webkit-slider-runnable-track {
+      height: 40px;
+      -webkit-appearance: none;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+
+    html input[type="range"]::-webkit-slider-thumb {
+      width: 40px;
+      -webkit-appearance: none;
+      height: 40px;
+      cursor: ew-resize;
+      /*Release colour*/
+      background: #6b7280;
+      /*Range amount colour*/
+      box-shadow: -340px 0 0 320px rgb(55, 65, 81), inset 0 0 0 40px #9ca3af;
+      border-radius: 50%;
+      transition: box-shadow 0.2s ease-in-out;
+      position: relative;
+    }
+
+    html input[type="range"]:active::-webkit-slider-thumb {
+      background: #9ca3af;
+      box-shadow: -340px 0 0 320px #374151, inset 0 0 0 3px #6b7280;
+      border-radius: 50%;
+    }
+
+    .simple-prose .radio-group p {
+      @apply flex items-center -my-1 text-white;
+    }
+
+    .simple-prose .radio-group-name {
+      @apply text-white;
+    }
+
+    .simple-prose .radio-group label {
+      @apply ml-2;
+    }
+
+    .simple-prose .checkbox-group p {
+      @apply flex items-center -my-1 mb-6 ;
+    }
+
+    .simple-prose .checkbox-group label {
+      @apply ml-2;
+    }
+  }
+}

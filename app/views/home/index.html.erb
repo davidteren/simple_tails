@@ -1,0 +1,244 @@
+<div class="simple-prose">
+  <nav>
+    <%= link_to "Home", "#" %>
+    <%= link_to "Services", "#" %>
+    <%= link_to "About", "#" %>
+    <%= link_to "Contact", "#" %>
+  </nav>
+  <main>
+    <h2 class="font-extralight">Basic Typography</h2>
+    <hr>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <figure>
+      <pre class="highlight">
+<code>&lth1>Heading 1&lt;h1>
+&lth2>Heading 2&lt;h2>
+&lth3>Heading 3&lt;h3>
+&lth4>Heading 4&lt;h4>
+&lth5>Heading 5&lt;h5>
+&lth6>Heading 6&lt;h6></code></pre>
+      <figcaption class="-mt-4 ">
+        <a href="https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder" target="_blank">Requires
+          entity encoding for the code to show</a>
+      </figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid, aperiam culpa ducimus eaque, earum et eum
+      ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.</p>
+    <pre class="highlight">
+</code>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid, aperiam culpa ducimus eaque, earum et eum ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.&lt;/p></code></pre>
+    <ul>
+      <li>
+        <strong>I am bold</strong>
+      </li>
+      <li>
+        <em>I am italic</em>
+      </li>
+      <li>
+        <u>I am underlined</u>
+      </li>
+      <li>
+        Let's highlight some text;
+        <mark>this text is highlighted</mark>
+      </li>
+      <li>Some inline code
+        <code>rails new my_app -d postgresql</code>
+      </li>
+    </ul>
+    <ol>
+      <li>Number one</li>
+      <li>Number two</li>
+      <li>Number three</li>
+    </ol>
+    <pre class="highlight">
+<code>&lt;ul>
+  &lt;li>&lt;strong>I am bold&lt;strong>&lt;li>
+  &lt;li>&lt;em>I am italic&lt;em>&lt;li>
+  &lt;li>&lt;u>I am underlined&lt;u>&lt;li>
+  &lt;li>Let's highlight some text; &lt;mark>this text is highlighted&lt;mark>&lt;li>
+  &lt;li>Some inline code &lt;code>rails new my_app -d postgresql&lt;code>&lt;li>
+&lt;ul>
+
+&lt;ol>
+  &lt;li>Number one&lt;li>
+  &lt;li>Number two&lt;li>
+  &lt;li>Number three&lt;li>
+&lt;ol></code></pre>
+    <br>
+    <hr>
+    <h2 class="font-extralight">Tables</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
+        <tr>
+          <td>  <%= name %></td>
+          <td><%= rand(99999) %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <pre class="highlight">
+<code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Number&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;%= name %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= rand(99999) %&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;% end %&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+    <br>
+    <hr>
+    <h2 class="font-extralight">Images</h2>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" alt="Ruby on Rails logo"/>
+    </p>
+    <figure>
+      <img alt="Photo of twin rails" src="https://dsv-media-premium.azureedge.net/~/media/corporate/banner/banner-1045/white-papers/rail_transport_dsv_2015_wall_calendar_02_3840x1045.jpg?rev=3125b1cf22744bc9877e8cd46b24a91d&w=1920"/>
+      <figcaption>Twin rails</figcaption>
+    </figure>
+    <pre class="highlight">
+<code>&lt;p&gt;
+  &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg&quot; alt=&quot;Ruby on Rails logo&quot;/&gt;
+&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img alt=&quot;Photo of twin rails&quot; src=&quot;https://dsv-media-premium.azureedge.net/~/media/corporate/banner/banner-1045/white-papers/rail_transport_dsv_2015_wall_calendar_02_3840x1045.jpg?rev=3125b1cf22744bc9877e8cd46b24a91d&amp;w=1920&quot;/&gt;
+  &lt;figcaption&gt;Twin rails&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+    <br>
+    <hr>
+    <h2 class="font-extralight">Forms</h2>
+    <%= form_with url: "/", method: :get do |form| %>
+      <p>
+        <%= form.label :query, "Search for:" %>
+        <%= form.text_field :query %>
+        <%= form.button "Search" %>
+      </p>
+    <% end %>
+    <pre class="highlight">
+<code>&lt;%= form_with url: &quot;/&quot;, method: :get do |form| %&gt;
+  &lt;p&gt;
+    &lt;%= form.label :query, &quot;Search for:&quot; %&gt;
+    &lt;%= form.text_field :query %&gt;
+    &lt;%= form.button &quot;Search&quot; %&gt;
+  &lt;/p&gt;
+&lt;% end %&gt;</code></pre>
+    <hr class="my-12">
+    <h2 class="font-extralight">Forms</h2>
+    <%= form_with url: "/", method: :get do |form| %>
+      <p>
+        <%= form.label :title %>
+        <%= form.select :desired_attribute, %w(Mr Miss Mrs Other) %>
+      </p>
+      <p>
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name %>
+      </p>
+      <p>
+        <%= form.label :surname %>
+        <%= form.text_field :surname %>
+      </p>
+      <p>
+        <%= form.label :email %>
+        <%= form.email_field :email %>
+      </p>
+      <p>
+        <%= form.label :telephone %>
+        <%= form.telephone_field :telephone %>
+      </p>
+      <p>
+        <%= form.label :message %>
+        <%= form.text_area :message, rows: 6 %>
+      </p>
+      <p>
+        <%= form.label :url %>
+        <%= form.url_field :url %>
+      </p>
+      <p>
+        <%= form.label :date %>
+        <%= form.date_field :date %>
+      </p>
+      <p>
+        <%= form.label :datetime %>
+        <%= form.datetime_field :datetime %>
+      </p>
+      <p>
+        <%= form.label :month %>
+        <%= form.month_field :month %>
+      </p>
+      <p>
+        <%= form.label :week %>
+        <%= form.week_field :week %>
+      </p>
+      <p>
+        <%= form.label :time %>
+        <%= form.time_field :time %>
+      </p>
+      <p>
+        <%= form.label :price %>
+        <%= form.number_field :price, in: 1.0 .. 20.0, step: 0.5 %>
+      </p>
+      <p>
+        <%= form.label :color %>
+        <%= form.color_field :color, class: "h-12" %>
+      </p>
+      <p>
+        <%= form.label :range %>
+        <%= form.range_field :range, in: 1.0 .. 20.0, step: 0.5 %>
+        <%#= range_field(:product, :discount, in: 1 .. 100, default: 21) %>
+      </p>
+      <label class="radio-group-name">Age:</label>
+      <div class="radio-group">
+        <p>
+          <%= form.radio_button :age, "child" %>
+          <%= form.label :age_child, "I am younger than 21" %>
+        </p>
+        <p>
+          <%= form.radio_button :age, "adult" %>
+          <%= form.label :age_adult, "I am over 21" %>
+        </p>
+      </div>
+      <p>
+        <%= form.label :select_one_or_more %>
+        <% @cities = [
+          {id: 1, name: "Berlin"},
+          {id: 2, name: "Chicago"},
+          {id: 3, name: "Madrid"},
+          {id: 4, name: "Cape Town"}
+        ].collect { |u| [u[:name], u[:id]] } %>
+        <%= select_tag :city,
+          options_for_select(@cities),
+          multiple: true %>
+      </p>
+      <div class="checkbox-group">
+        <p>
+          <%= form.check_box :agree_to_terms %>
+          <label for="agree_to_terms"> I agree to the <a href="#">terms and conditions</a></label>
+        </p>
+      </div>
+      <%= form.button %>
+      <%= form.button "Clear" %>
+      <%= form.button "Disabled", disabled: true %>`
+    <% end %>
+  </main>
+</div>
