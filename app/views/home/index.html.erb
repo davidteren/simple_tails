@@ -6,6 +6,16 @@
     <%= link_to "Contact", "#" %>
   </nav>
   <main>
+    <p> Stimulus counter test:
+      <span
+        data-controller="animated-number"
+        data-animated-number-start-value="0"
+        data-animated-number-end-value="100000"
+        data-animated-number-duration-value="3000000"
+      >
+      0
+    </span></p>
+
     <h2 class="font-extralight">Basic Typography</h2>
     <hr>
     <h1>Heading 1</h1>
@@ -166,10 +176,15 @@
         <%= form.label :telephone %>
         <%= form.telephone_field :telephone %>
       </p>
-      <p>
-        <%= form.label :message %>
-        <%= form.text_area :message, rows: 6 %>
-      </p>
+      <div data-controller="character-counter">
+        <p>
+          <%= form.label :message %>
+          <%= form.text_area :message, rows: 6, data: {character_counter_target: :input} %>
+        </p>
+
+        <div class=" -mt-5 flex justify-end text-white font-light text-sm"><span class="mr-1 text-[18px]" data-character-counter-target="counter"></span> characters
+      </div>
+      </div>
       <p>
         <%= form.label :url %>
         <%= form.url_field :url %>
