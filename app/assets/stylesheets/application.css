@@ -16,12 +16,11 @@
   }
 
   .simple-prose {
-    @apply /*prose-p:text-[18.4px]*/
-      /*prose-li:text-red-400*/
+    @apply
     prose
     prose-headings:my-6
     prose-headings:break-words
-    prose-headings:font-bold
+    prose-headings:font-semibold
     prose-headings:leading-tight
     prose-headings:text-white
     prose-h1:sm:text-[3rem]
@@ -35,7 +34,7 @@
     prose-h5:text-[1.15rem]
     prose-h6:text-[0.96rem]
     prose-p:text-white
-    prose-a:text-blue-400
+    prose-a:text-blue-600
     prose-blockquote:mx-24
     prose-blockquote:font-extralight
     prose-blockquote:text-white
@@ -82,7 +81,6 @@
 
   .simple-prose textarea,
   .simple-prose select,
-  .simple-prose input[type="button"],
   .simple-prose input[type="color"],
   .simple-prose input[type="date"],
   .simple-prose input[type="datetime-local"],
@@ -96,7 +94,6 @@
   .simple-prose input[type="range"],
   .simple-prose input[type="reset"],
   .simple-prose input[type="search"],
-  .simple-prose input[type="submit"],
   .simple-prose input[type="tel"],
   .simple-prose input[type="text"],
   .simple-prose input[type="time"],
@@ -106,72 +103,121 @@
     text-white md:w-3/5;
   }
 
-  .simple-prose button {
-    @apply my-2 mx-1 rounded bg-gray-300 py-3 px-4 text-center font-sans text-base
-    text-neutral-800 hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
-  } {
-  @apply w-full rounded-md border-2 border-red-300 bg-yellow-200 py-2 px-4
-}
-  input[type="range"] {
-    outline: 0;
-    border: 0;
-    border-radius: 500px;
-    width: 400px;
-    max-width: 100%;
-    margin: 2px 0 1px;
-    transition: box-shadow 0.2s ease-in-out;
+  input[type="submit"] {
+    @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
+    text-white md:w-3/5;
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    html input[type="range"] {
-      overflow: hidden;
-      height: 40px;
-    }
+  .simple-prose label {
+    @apply text-white;
+  }
 
-    html input[type="range"]::-webkit-slider-runnable-track {
-      height: 40px;
-      -webkit-appearance: none;
-      transition: box-shadow 0.2s ease-in-out;
-    }
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
 
-    html input[type="range"]::-webkit-slider-thumb {
-      width: 40px;
-      -webkit-appearance: none;
-      height: 40px;
-      cursor: ew-resize;
-      /*Release colour*/
-      background: #6b7280;
-      /*Range amount colour*/
-      box-shadow: -340px 0 0 320px rgb(55, 65, 81), inset 0 0 0 40px #9ca3af;
-      border-radius: 50%;
-      transition: box-shadow 0.2s ease-in-out;
-      position: relative;
-    }
+  .simple-prose button,
+  .simple-prose input[type="submit"] {
+    @apply my-2 mx-1 rounded bg-gray-300 py-3 px-4 text-center font-sans text-base
+    text-neutral-800 hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
+  }
 
-    html input[type="range"]:active::-webkit-slider-thumb {
-      background: #9ca3af;
-      box-shadow: -340px 0 0 320px #374151, inset 0 0 0 3px #6b7280;
-      border-radius: 50%;
-    }
+  .simple-prose .radio-group p {
+    @apply flex items-center -my-1 text-white;
+  }
 
-    .simple-prose .radio-group p {
-      @apply flex items-center -my-1 text-white;
-    }
+  .simple-prose .radio-group-name {
+    @apply text-white;
+  }
 
-    .simple-prose .radio-group-name {
-      @apply text-white;
-    }
+  .simple-prose .radio-group label {
+    @apply ml-2;
+  }
 
-    .simple-prose .radio-group label {
-      @apply ml-2;
-    }
+  .simple-prose .checkbox-group p {
+    @apply flex items-center -my-1 mb-6 ;
+  }
 
-    .simple-prose .checkbox-group p {
-      @apply flex items-center -my-1 mb-6 ;
-    }
+  .simple-prose .checkbox-group label {
+    @apply ml-2;
+  }
 
-    .simple-prose .checkbox-group label {
-      @apply ml-2;
+  button[disabled],
+  [role="button"][aria-disabled="true"],
+  input[type="submit"][disabled],
+  input[type="reset"][disabled],
+  input[type="button"][disabled],
+  input[type="checkbox"][disabled],
+  input[type="radio"][disabled],
+  select[disabled] {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    @apply cursor-not-allowed bg-gray-700 !important;;
+  }
+
+  body > header {
+    @apply bg-gray-800 border-b-[1px] border-gray-500 text-center px-2 pb-8;
+    grid-column: 1 / -1;
+  }
+
+  body > header h1 {
+    @apply max-w-screen-xl mx-auto my-4 text-white text-[3rem] font-bold;
+  }
+
+  body > header p {
+    @apply max-w-2xl mx-auto my-4 text-white text-xl;
+  }
+
+  /* Format navigation */
+  header > nav {
+    @apply max-w-screen-xl mx-auto my-4 text-white;
+   
+  }
+
+  /* Use flexbox to allow items to wrap, as needed */
+  header > nav ul,
+  header > nav ol {
+    align-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* List items are inline elements, make them behave more like blocks */
+  header > nav ul li,
+  header > nav ol li {
+    display: inline-block;
+  }
+
+  header > nav a,
+  header > nav a:visited {
+    margin: 0 0.5rem 1rem 0.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+  }
+
+  header > nav a:hover {
+    @apply brightness-150 cursor-pointer;
+  }
+
+  /* Reduce nav side on mobile */
+  @media only screen and (max-width: 720px) {
+    header > nav a {
+      @apply border-none p-0 underline leading-3;
+     
     }
   }
 }

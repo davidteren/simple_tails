@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MyApp</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<%= csrf_meta_tags %>
-	<%= csp_meta_tag %>
+  <title>MyApp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%#= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  <%= vite_client_tag %>
+  <%= vite_stylesheet_tag 'application', data: {"turbo-track": "reload"} %>
+  <%= vite_javascript_tag 'application' %>
+  <!--
+  If using a TypeScript entrypoint file:
+    vite_typescript_tag 'application'
 
-	<%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-	<%#= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-	<%= vite_client_tag %>
-	<%= vite_stylesheet_tag 'application', data: {"turbo-track": "reload"} %>
-	<%= vite_javascript_tag 'application' %>
-	<!--
-		If using a TypeScript entrypoint file:
-			vite_typescript_tag 'application'
+  If using a .jsx or .tsx entrypoint, add the extension:
+    vite_javascript_tag 'application.jsx'
 
-		If using a .jsx or .tsx entrypoint, add the extension:
-			vite_javascript_tag 'application.jsx'
-
-		Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
-	-->
-
+  Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
+-->
 </head>
-	<body>
-		<%= yield %>
-	</body>
+<body>
+<header>
+  <nav>
+    <%= link_to "Home", "/" %>
+
+    <%= link_to "Sevices", "#" %>
+    <%= link_to "Blog", posts_path %>
+    <%= link_to "About", "#" %>
+    <%= link_to "Contact", "#" %>
+  </nav>
+    <h1 class="">MyApp</h1>
+    <p>Build fast using symantic HTML tags in Rails</p>
+</header>
+
+<main class="simple-prose">
+  <%= yield %>
+</main>
+</body>
 </html>

@@ -1,11 +1,4 @@
-<div class="simple-prose">
-  <nav>
-    <%= link_to "Home", "#" %>
-    <%= link_to "Services", "#" %>
-    <%= link_to "About", "#" %>
-    <%= link_to "Contact", "#" %>
-  </nav>
-  <main>
+
     <p> Stimulus counter test:
       <span
         data-controller="animated-number"
@@ -13,9 +6,8 @@
         data-animated-number-end-value="100000"
         data-animated-number-duration-value="3000000"
       >
-      0
-    </span></p>
-
+        0
+      </span></p>
     <h2 class="font-extralight">Basic Typography</h2>
     <hr>
     <h1>Heading 1</h1>
@@ -83,18 +75,18 @@
     <h2 class="font-extralight">Tables</h2>
     <table>
       <thead>
-      <tr>
-        <th>Name</th>
-        <th>Number</th>
-      </tr>
+        <tr>
+          <th>Name</th>
+          <th>Number</th>
+        </tr>
       </thead>
       <tbody>
-      <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
-        <tr>
-          <td>  <%= name %></td>
-          <td><%= rand(99999) %></td>
-        </tr>
-      <% end %>
+        <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
+          <tr>
+            <td>  <%= name %></td>
+            <td><%= rand(99999) %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
     <pre class="highlight">
@@ -181,9 +173,8 @@
           <%= form.label :message %>
           <%= form.text_area :message, rows: 6, data: {character_counter_target: :input} %>
         </p>
-
-        <div class=" -mt-5 flex justify-end text-white font-light text-sm"><span class="mr-1 text-[18px]" data-character-counter-target="counter"></span> characters
-      </div>
+        <div class=" -mt-5 max-w-2xl flex justify-end text-white font-light text-sm"><span class="mr-1 text-[18px]" data-character-counter-target="counter"></span> characters
+        </div>
       </div>
       <p>
         <%= form.label :url %>
@@ -207,7 +198,7 @@
       </p>
       <p>
         <%= form.label :time %>
-        <%= form.time_field :time %>
+        <%= form.time_field :time%>
       </p>
       <p>
         <%= form.label :price %>
@@ -220,7 +211,6 @@
       <p>
         <%= form.label :range %>
         <%= form.range_field :range, in: 1.0 .. 20.0, step: 0.5 %>
-        <%#= range_field(:product, :discount, in: 1 .. 100, default: 21) %>
       </p>
       <label class="radio-group-name">Age:</label>
       <div class="radio-group">
@@ -231,6 +221,10 @@
         <p>
           <%= form.radio_button :age, "adult" %>
           <%= form.label :age_adult, "I am over 21" %>
+        </p>
+        <p>
+          <%= form.radio_button :age, "eternal" , disabled: true %>
+          <%= form.label :age_adult, "I am eternal" %>
         </p>
       </div>
       <p>
@@ -255,5 +249,4 @@
       <%= form.button "Clear" %>
       <%= form.button "Disabled", disabled: true %>`
     <% end %>
-  </main>
-</div>
+
