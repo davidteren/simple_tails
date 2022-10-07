@@ -52,7 +52,7 @@
     prose-table:text-gray-300
     prose-img:mx-auto
     prose-hr:my-0;
-    
+
   }
 
   .prose main {
@@ -176,7 +176,7 @@
   /* Format navigation */
   header > nav {
     @apply max-w-screen-xl mx-auto my-4 text-white;
-   
+
   }
 
   /* Use flexbox to allow items to wrap, as needed */
@@ -218,7 +218,7 @@
   @media only screen and (max-width: 720px) {
     header > nav a {
       @apply border-none p-0 underline leading-3;
-     
+
     }
   }
 }
