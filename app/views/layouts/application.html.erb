@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SimpleTails</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= vite_client_tag %>
-  <%= vite_stylesheet_tag 'application', data: {"turbo-track": "reload"} %>
-  <%= vite_javascript_tag 'application' %>
-
-</head>
-<body>
-<header>
-  <nav>
-    <%= link_to "Home", "/"%>
-    <%= link_to "Services", "#" %>
-    <%= link_to "Blog", posts_path %>
-    <%= link_to "About", "#" %>
-    <%= link_to "Contact", "#" %>
-
-    <% if user_signed_in? %>
-      <%= link_to "Account", edit_user_registration_path %>
-      <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete } %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </nav>
-    <h1 class="">SimpleTails</h1>
-    <p>Build fast using symantic HTML tags in Rails</p>
-</header>
-
-<main class="simple-prose">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <%= yield %>
-</main>
-</body>
+  <head>
+    <title>SimpleTails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_stylesheet_tag 'application', data: {"turbo-track": "reload"} %>
+    <%= vite_javascript_tag 'application' %>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <%= link_to "Home", "/"%>
+        <%= link_to "Services", "#" %>
+        <%= link_to "Blog", posts_path %>
+        <%= link_to "About", "#" %>
+        <%= link_to "Contact", "#" %>
+        <% if user_signed_in? %>
+          <%= link_to "Account", edit_user_registration_path %>
+          <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete } %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path %>
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
+      </nav>
+      <h1 class="">SimpleTails</h1>
+      <p>Build fast using symantic HTML tags in Rails</p>
+    </header>
+    <main class="simple-prose">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </main>
+  </body>
 </html>
