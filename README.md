@@ -39,7 +39,8 @@ HTML heading tags and unordered lists
 </details>
 
 <details>
-  <summary>Basic Table Example<h4>Click to see</h4></summary>
+  <summary>📂 <h3>Basic Table Example</h3><p> Click to view</p></summary>
+
 A table with just enough styling can be rendered from something like this 
 
 ```html 
