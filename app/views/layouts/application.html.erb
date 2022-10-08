@@ -25,16 +25,27 @@
   <nav>
     <%= link_to "Home", "/", data:{turbo: false} %>
 
-    <%= link_to "Sevices", "#" %>
+    <%= link_to "Services", "#" %>
     <%= link_to "Blog", posts_path %>
     <%= link_to "About", "#" %>
     <%= link_to "Contact", "#" %>
+
+    <% if user_signed_in? %>
+      <%= link_to "Account", edit_user_registration_path %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, form: {turbolink: false}%>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
   </nav>
     <h1 class="">MyApp</h1>
     <p>Build fast using symantic HTML tags in Rails</p>
 </header>
 
 <main class="simple-prose">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
   <%= yield %>
 </main>
 </body>

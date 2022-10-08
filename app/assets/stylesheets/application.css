@@ -179,9 +179,11 @@
 
   }
 
+
   /* Use flexbox to allow items to wrap, as needed */
   header > nav ul,
-  header > nav ol {
+  header > nav ol,
+  header > nav > form {
     align-content: space-around;
     align-items: center;
     display: flex;
@@ -195,12 +197,14 @@
 
   /* List items are inline elements, make them behave more like blocks */
   header > nav ul li,
-  header > nav ol li {
+  header > nav ol li,
+  header > nav > form  {
     display: inline-block;
   }
 
   header > nav a,
-  header > nav a:visited {
+  header > nav a:visited,
+  header > nav > form  {
     margin: 0 0.5rem 1rem 0.5rem;
     border: 1px solid gray;
     border-radius: 5px;
@@ -210,15 +214,16 @@
     text-decoration: none;
   }
 
-  header > nav a:hover {
+  header > nav a:hover,
+  header > nav > form:hover {
     @apply brightness-150 cursor-pointer;
   }
 
   /* Reduce nav side on mobile */
   @media only screen and (max-width: 720px) {
-    header > nav a {
+    header > nav a,
+    header > nav > form > button{
       @apply border-none p-0 underline leading-3;
-
     }
   }
 }

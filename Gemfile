@@ -31,6 +31,11 @@ gem "vite_rails"
 gem "vite_ruby"
 
 
+gem "devise"
+
+
+
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
