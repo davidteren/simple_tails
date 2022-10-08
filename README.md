@@ -7,12 +7,26 @@ I wanted a way to to have sensible styling in a Rails application with minimal s
 SimpleTails leverages the [official Tailwind CSS Typography plugin](https://tailwindcss.com/docs/typography-plugin) `prose` classes with some custom setup.
 This makes it possible to have default styling out the box.
 
+---
+## Bennefits
+
+A simple HTML heading tag `<h1>Heading 1</h1>` renders
+
+![](./images/heading_1_render.png)
+
+
+---
+
+
 
 All the magic is here: [simple_tails.css](app/assets/stylesheets/simple_tails.css)
 
 > This Rails app exist for the purpose of of developing and refining SimpleTails.
 
 ---
+
+
+
 
 ## Usage: 
 
@@ -72,7 +86,7 @@ Loging using the following credentials:
 
 ## Example Screenshot
 
-![](example_screenshot.png)
+![](./images/example_screenshot.png)
 
 
 ### Contribute
