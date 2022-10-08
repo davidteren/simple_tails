@@ -297,3 +297,12 @@ Loging using the following credentials:
 ### Contribute
 
 Please feel free to do so 🚀
+
+
+### To Do 
+
+- [ ] Fix off center layouts
+- [ ] Add a way for forms to be centered i.e. devise forms
+- [ ] Implement color scheme similar to Simmple.CSS 
+- [ ] Implement dark/light modes 
+- [ ] Add the footer styling
