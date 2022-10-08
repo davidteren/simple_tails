@@ -210,8 +210,7 @@ A single portable stylesheet with custom TailwindCSS prose is used.
 All the magic is here: [simple_tails.css](app/assets/stylesheets/simple_tails.css)
 
 
-      
-> This Rails app exists for the purpose of developing and refining SimpleTails.
+> You only need the `simple_tails.css` stylesheet. This Rails app exists for the purpose of developing and refining SimpleTails.
 
 ---
 
