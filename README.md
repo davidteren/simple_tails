@@ -10,14 +10,69 @@ This makes it possible to have default styling out the box.
 ---
 ## Bennefits
 
-A simple HTML heading tag `<h1>Heading 1</h1>` renders
+<details open="">
+  <summary>Typography Example<h4>Click to see</h4></summary>
 
-![](./images/heading_1_render.png=100x100)
+A simple HTML heading tags like these will render
 
-----
+```html
+<h1>Heading 1</h1>
+```
 
-![](./images/heading_1_render.png | width=100)
+<img src="./images/heading_1_render.png" width="250" height="100">
+
+
+<details open="">
+  <summary>Basic Table Example<h4>Click to see</h4></summary>
+A table with just enough styling can be rendered from something like this 
+
+```html 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
+      <tr>
+        <td>  <%= name %></td>
+        <td><%= rand(99999) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+```
+
+Resulting in this
+<img src="./images/table_rendering.png" width="800" height="300">
+
+</details>
+
+
+
 ---
+
+For a quick header and navigation solution
+```html
+<header>
+  <nav>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Services", services_path %>
+    <%= link_to "Blog", posts_path %>
+    <%= link_to "About", about_us_path %>
+    <%= link_to "Contact", contacts_path %>
+  </nav>
+  <h1 class="">SimpleTails</h1>
+  <p>Build fast using symantic HTML tags in Rails</p>
+</header>
+```
+Resulting in this
+<img src="./images/header_nav_render.png" width="800" height="300">
+
+
+
 
 
 
