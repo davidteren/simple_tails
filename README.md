@@ -34,6 +34,8 @@ HTML heading tags and unordered lists
   </li>
 </ul>
 ```
+ 
+Renders the following
 
 <img src="./images/typography_render.png" width="400" >
 
@@ -66,7 +68,8 @@ A table with just enough styling can be rendered from something like this
 </table>
 ```
 
-Resulting in this
+Renders the following
+
 <img src="./images/table_rendering.png" width="800">
 
 </details>
@@ -91,9 +94,13 @@ For a quick header and navigation solution
   <p>Build fast using symantic HTML tags in Rails</p>
 </header>
 ```
-Resulting in this
-<img src="./images/header_nav_render.png" width="800">
+Renders the following
 
+<img src="./images/header_render2.png" width="800">
+
+And on mobile 
+
+<img src="./images/header_render_mobile.png" width="400">
 
 </details>
 
@@ -117,7 +124,7 @@ Resulting in this
 </ul>
 ```
 
-Resulting in this
+Renders the following
 
 <img src="./images/typography_with_overides_render.png" width="400">
 
@@ -194,10 +201,9 @@ Resulting in this
 <% end %>
 
 ```
-
-
 </details>
 
+Renders the following
 
 <img src="./images/form_render.png" width="600">
 </details>
