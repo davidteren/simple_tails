@@ -70,9 +70,9 @@ Loging using the following credentials:
 
 ---
 
-## Screenshot Example
+## Example Screenshot
 
-![](../../../Desktop/CleanShot 2022-10-08 at 21.04.03@2x.png)
+![](example_screenshot.png)
 
 
 ### Contribute
