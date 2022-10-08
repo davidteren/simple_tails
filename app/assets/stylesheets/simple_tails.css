@@ -5,7 +5,7 @@
   }
 
   body {
-    @apply m-0 grid bg-gray-900;
+    @apply m-0 grid bg-dark-bg;
     grid-template-columns: 1fr min(45rem, 90%) 1fr;
   }
 
@@ -20,7 +20,7 @@
     prose-headings:break-words
     prose-headings:font-semibold
     prose-headings:leading-tight
-    prose-headings:text-white
+    prose-headings:text-dark-text
     prose-h1:sm:text-[3rem]
     prose-h1:text-[2.5rem]
     prose-h2:sm:text-[2.6rem]
@@ -31,23 +31,28 @@
     prose-h4:sm:text-[1.25rem]
     prose-h5:text-[1.15rem]
     prose-h6:text-[0.96rem]
-    prose-p:text-white
-    prose-a:text-blue-600
+    prose-p:text-dark-text
+    prose-a:text-purple-600
     prose-blockquote:mx-24
     prose-blockquote:font-extralight
-    prose-blockquote:text-white
+    prose-blockquote:text-dark-text
     prose-figcaption:text-center
-    prose-strong:text-white
-    prose-code:bg-gray-800
+    prose-strong:text-dark-text
+
     prose-code:font-mono
     prose-code:font-extralight
-    prose-code:text-gray-300
+    prose-code:text-dark-text-light
+
+    prose-pre:bg-dark-accent-bg
     prose-pre:font-mono
     prose-pre:font-extralight
-    prose-pre:text-gray-400
-    prose-ol:text-gray-300
-    prose-ul:text-gray-300
-    prose-table:text-gray-300
+    prose-pre:text-dark-code
+    prose-pre:border
+    prose-pre:border-[1px]
+    prose-pre:border-dark-border
+    prose-ol:text-dark-text-light
+    prose-ul:text-dark-text-light
+    prose-table:text-dark-text-light
     prose-img:mx-auto
     prose-hr:my-0;
 
@@ -71,7 +76,7 @@
   }
 
   .simple-tails nav {
-    @apply mt-4 flex flex-col  text-xl  sm:mx-12 sm:flex-row sm:justify-between sm:text-2xl;
+    @apply mt-4 flex flex-col text-xl sm:mx-12 sm:flex-row sm:justify-between sm:text-2xl;
   }
 
   .simple-tails label {
@@ -98,17 +103,17 @@
   .simple-tails input[type="time"],
   .simple-tails input[type="url"],
   .simple-tails input[type="week"] {
-    @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
-    text-white md:w-3/5;
+    @apply w-full rounded-md border-2 border-dark-border bg-dark-accent-bg py-2 px-4
+    text-dark-text md:w-3/5;
   }
 
   input[type="submit"] {
-    @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
-    text-white md:w-3/5;
+    @apply w-full rounded-md border-2 border-dark-border bg-dark-accent-bg py-2 px-4
+    text-dark-text md:w-3/5;
   }
 
   .simple-tails label {
-    @apply text-white;
+    @apply text-dark-text;
   }
 
   ::-webkit-calendar-picker-indicator {
@@ -117,16 +122,16 @@
 
   .simple-tails button,
   .simple-tails input[type="submit"] {
-    @apply my-2 mx-1 rounded bg-gray-300 py-3 px-4 text-center font-sans text-base
-    text-neutral-800 hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
+    @apply my-2 mx-1 rounded bg-dark-accent py-3 px-4 text-center font-sans text-dark-bg
+     hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
   }
 
   .simple-tails .radio-group p {
-    @apply flex items-center -my-1 text-white;
+    @apply flex items-center -my-1 text-dark-text;
   }
 
   .simple-tails .radio-group-name {
-    @apply text-white;
+    @apply text-dark-text;
   }
 
   .simple-tails .radio-group label {
@@ -155,25 +160,25 @@
   input:disabled,
   textarea:disabled,
   select:disabled {
-    @apply cursor-not-allowed bg-gray-700 !important;;
+    @apply cursor-not-allowed bg-dark-accent-bg !important;;
   }
 
   body > header {
-    @apply bg-gray-800 border-b-[1px] border-gray-500 text-center px-2 pb-8;
+    @apply bg-dark-accent-bg border-b-[1px] border-gray-500 text-center px-2 pb-8;
     grid-column: 1 / -1;
   }
 
   body > header h1 {
-    @apply max-w-screen-xl mx-auto my-4 text-white text-[3rem] font-bold;
+    @apply max-w-screen-xl mx-auto my-4 text-dark-text text-[3rem] font-bold;
   }
 
   body > header p {
-    @apply max-w-2xl mx-auto my-4 text-white text-xl;
+    @apply max-w-2xl mx-auto my-4 text-dark-text text-xl;
   }
 
   /* Format navigation */
   header > nav {
-    @apply max-w-screen-xl mx-auto my-4 text-white;
+    @apply max-w-screen-xl mx-auto my-4 text-dark-text;
 
   }
 
@@ -203,10 +208,10 @@
   header > nav a,
   header > nav a:visited,
   header > nav > form  {
+    @apply text-dark-text ;
     margin: 0 0.5rem 1rem 0.5rem;
     border: 1px solid gray;
     border-radius: 5px;
-    color: white;
     display: inline-block;
     padding: 0.1rem 1rem;
     text-decoration: none;

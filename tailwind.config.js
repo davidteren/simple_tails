@@ -20,6 +20,19 @@ module.exports = {
       'mono': ["Consolas", "Menlo", "Monaco", "Andale Mono", "Ubuntu Mono", "monospace"]
     },
     extend: {
+      colors: {
+          dark: {
+            bg: "#212121",
+            'accent-bg': "#2b2b2b",
+            text: "#dcdcdc",
+            'text-light': "#ababab",
+            border: '#898EA4',
+            accent: "#ffb300",
+            code: "#f06292",
+            preformatted: "#ccc",
+            disabled: "#111",
+          }
+      }
     },
   },
   corePlugins: {
