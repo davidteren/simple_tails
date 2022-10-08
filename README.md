@@ -12,9 +12,11 @@ This makes it possible to have default styling out the box.
 
 A simple HTML heading tag `<h1>Heading 1</h1>` renders
 
-![](./images/heading_1_render.png)
+![](./images/heading_1_render.png=100x100)
 
+----
 
+![](./images/heading_1_render.png | width=100)
 ---
 
 
