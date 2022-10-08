@@ -10,6 +10,7 @@
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.16",
+    "postcss-import": "^15.0.0",
     "sass": "^1.54.9",
     "stimulus-animated-number": "^4.0.0",
     "stimulus-character-counter": "^4.1.0",
