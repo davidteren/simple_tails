@@ -209,29 +209,11 @@ Resulting in this
 A single portable stylesheet with custom TailwindCSS prose is used.  
 All the magic is here: [simple_tails.css](app/assets/stylesheets/simple_tails.css)
 
-All you need to do is add the `.simple-tails` class to the element encapsulating the HTML you want to style.
 
-If you want any element to be `prose` free and have it revert to the default unstyled TailwindCSS use the  `not-prose` class
-
-```html
-<main class="simple-tails" >
-  <h1>Some Heading</h1>
-  <p>Some blurb here...</p>
-    <!-- Content styled via custom prose -->
-  <div>
-    <!-- Some content that needs to be prose-free -->
-  </div>
-</main>
-
-
-```
       
-> This Rails app exist for the purpose of of developing and refining SimpleTails.
+> This Rails app exists for the purpose of developing and refining SimpleTails.
 
 ---
-
-
-
 
 ## Usage: 
 
@@ -249,11 +231,21 @@ If you want any element to be `prose` free and have it revert to the default uns
 
 @import "./simple_tails.css";
 ```
- NB: Note that we use the following css import directive for the TailwindCSS imports.
-```css
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
+Then add the `.simple-tails` class to the element encapsulating the HTML you want to style.
+
+If you want any element to be `prose` free and have it revert to the default unstyled TailwindCSS use the `not-prose` class
+
+```html
+<main class="simple-tails" >
+  <h1>Some Heading</h1>
+  <p>Some blurb here...</p>
+    <!-- Content styled via custom prose -->
+  <div>
+    <!-- Some content that needs to be prose-free -->
+  </div>
+</main>
+
 ```
 
 ---- 
