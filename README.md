@@ -10,19 +10,35 @@ This makes it possible to have default styling out the box.
 ---
 ## Bennefits
 
-<details open="">
-  <summary>Typography Example<h4>Click to see</h4></summary>
 
-A simple HTML heading tags like these will render
+
+<details>
+  <summary>📘 Typography Example  <p> <h2>    ⤴</h2> Click to view </p>  </summary>
+
+HTML heading tags and unordered lists
 
 ```html
 <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<ul>
+  <li>
+    <strong>I am bold</strong>
+  </li>
+  <li>
+    <em>I am italic</em>
+  </li>
+  <li>
+    <u>I am underlined</u>
+  </li>
+</ul>
 ```
 
-<img src="./images/heading_1_render.png" width="250" height="100">
+<img src="./images/typography_render.png" width="450" >
 
+</details>
 
-<details open="">
+<details>
   <summary>Basic Table Example<h4>Click to see</h4></summary>
 A table with just enough styling can be rendered from something like this 
 
@@ -53,6 +69,8 @@ Resulting in this
 
 
 ---
+<details>
+  <summary>Basic Table Example<h4>Click to see</h4></summary>
 
 For a quick header and navigation solution
 ```html
@@ -72,7 +90,7 @@ Resulting in this
 <img src="./images/header_nav_render.png" width="800" height="300">
 
 
-
+</details>
 
 
 
