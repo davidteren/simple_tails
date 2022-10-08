@@ -52,11 +52,13 @@
 		<code>rails new simple_tails -d postgresql</code>
 	</li>
 </ul>
+<div class="not-prose">
 <ol>
 	<li>Number one</li>
 	<li>Number two</li>
 	<li>Number three</li>
 </ol>
+</div>
 <pre class="highlight">
 <code>&lt;ul>
   &lt;li>&lt;strong>I am bold&lt;strong>&lt;li>
@@ -255,64 +257,7 @@
 <br>
 
 
-<%= form_with url: "/", method: :get do |form| %>
-	<p>
-		<%= form.label :title %>
-		<%= form.select :desired_attribute, %w(Mr Miss Mrs Other) %>
-	</p>
-	<p>
-		<%= form.label :first_name %>
-		<%= form.text_field :first_name %>
-	</p>
-	<p>
-		<%= form.label :email %>
-		<%= form.email_field :email %>
-	</p>
-	<p>
-		<%= form.label :message %>
-		<%= form.text_area :message, rows: 6, data: {character_counter_target: :input} %>
-	</p>
-	<p>
-		<%= form.label :date %>
-		<%= form.date_field :date %>
-	</p>
-	<label class="radio-group-name">Age:</label>
-	<div class="radio-group">
-		<p>
-			<%= form.radio_button :age, "child" %>
-			<%= form.label :age_child, "I am younger than 21" %>
-		</p>
-		<p>
-			<%= form.radio_button :age, "adult" %>
-			<%= form.label :age_adult, "I am over 21" %>
-		</p>
-		<p>
-			<%= form.radio_button :age, "eternal", disabled: true %>
-			<%= form.label :age_adult, "I am eternal" %>
-		</p>
-	</div>
-	<p>
-		<%= form.label :select_one_or_more %>
-		<% @cities = [
-			{id: 1, name: "Berlin"},
-			{id: 2, name: "Chicago"},
-			{id: 3, name: "Madrid"},
-			{id: 4, name: "Cape Town"}
-		].collect { |u| [u[:name], u[:id]] } %>
-		<%= select_tag :city,
-			options_for_select(@cities),
-			multiple: true %>
-	</p>
-	<div class="checkbox-group">
-		<p>
-			<%= form.check_box :agree_to_terms %>
-			<label for="agree_to_terms"> I agree to the <a href="#">terms and conditions</a></label>
-		</p>
-	</div>
-	<%= form.button %>
-	<%= form.button "Clear" %>
-	<%= form.button "Disabled", disabled: true %>`
-<% end %>
+
 
 
 <br>
@@ -320,37 +265,9 @@
 <br>
 <br>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<ul>
-	<li>
-		<strong>I am bold</strong>
-	</li>
-	<li>
-		<em>I am italic</em>
-	</li>
-	<li>
-		<u>I am underlined</u>
-	</li>
-</ul>
 
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<h1 class="font-extralight">Heading 1</h1>
-<h2 class="text-red-500">Heading 2</h2>
-<h3 class="text-sm">Heading 3</h3>
-<ul>
-	<li>
-		<strong>I am <span class="text-pink-600 font-extrabold">bold</span></strong>
-	</li>
-	<li>
-		<em>I am <span class="text-orange-600 text-3xl font-extralight">italic</span></em>
-	</li>
-</ul>
+
+
 
 

@@ -13,7 +13,7 @@
     grid-column: 2;
   }
 
-  .simple-prose {
+  .simple-tails {
     @apply
     prose
     prose-headings:my-6
@@ -70,34 +70,34 @@
     @apply break-words;
   }
 
-  .simple-prose nav {
+  .simple-tails nav {
     @apply mt-4 flex flex-col  text-xl  sm:mx-12 sm:flex-row sm:justify-between sm:text-2xl;
   }
 
-  .simple-prose label {
+  .simple-tails label {
     @apply block;
   }
 
-  .simple-prose textarea,
-  .simple-prose select,
-  .simple-prose input[type="color"],
-  .simple-prose input[type="date"],
-  .simple-prose input[type="datetime-local"],
-  .simple-prose input[type="email"],
-  .simple-prose input[type="file"],
-  .simple-prose input[type="hidden"],
-  .simple-prose input[type="image"],
-  .simple-prose input[type="month"],
-  .simple-prose input[type="number"],
-  .simple-prose input[type="password"],
-  .simple-prose input[type="range"],
-  .simple-prose input[type="reset"],
-  .simple-prose input[type="search"],
-  .simple-prose input[type="tel"],
-  .simple-prose input[type="text"],
-  .simple-prose input[type="time"],
-  .simple-prose input[type="url"],
-  .simple-prose input[type="week"] {
+  .simple-tails textarea,
+  .simple-tails select,
+  .simple-tails input[type="color"],
+  .simple-tails input[type="date"],
+  .simple-tails input[type="datetime-local"],
+  .simple-tails input[type="email"],
+  .simple-tails input[type="file"],
+  .simple-tails input[type="hidden"],
+  .simple-tails input[type="image"],
+  .simple-tails input[type="month"],
+  .simple-tails input[type="number"],
+  .simple-tails input[type="password"],
+  .simple-tails input[type="range"],
+  .simple-tails input[type="reset"],
+  .simple-tails input[type="search"],
+  .simple-tails input[type="tel"],
+  .simple-tails input[type="text"],
+  .simple-tails input[type="time"],
+  .simple-tails input[type="url"],
+  .simple-tails input[type="week"] {
     @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
     text-white md:w-3/5;
   }
@@ -107,7 +107,7 @@
     text-white md:w-3/5;
   }
 
-  .simple-prose label {
+  .simple-tails label {
     @apply text-white;
   }
 
@@ -115,29 +115,29 @@
     filter: invert(1);
   }
 
-  .simple-prose button,
-  .simple-prose input[type="submit"] {
+  .simple-tails button,
+  .simple-tails input[type="submit"] {
     @apply my-2 mx-1 rounded bg-gray-300 py-3 px-4 text-center font-sans text-base
     text-neutral-800 hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
   }
 
-  .simple-prose .radio-group p {
+  .simple-tails .radio-group p {
     @apply flex items-center -my-1 text-white;
   }
 
-  .simple-prose .radio-group-name {
+  .simple-tails .radio-group-name {
     @apply text-white;
   }
 
-  .simple-prose .radio-group label {
+  .simple-tails .radio-group label {
     @apply ml-2;
   }
 
-  .simple-prose .checkbox-group p {
+  .simple-tails .checkbox-group p {
     @apply flex items-center -my-1 mb-6 ;
   }
 
-  .simple-prose .checkbox-group label {
+  .simple-tails .checkbox-group label {
     @apply ml-2;
   }
 
