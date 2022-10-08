@@ -303,6 +303,7 @@ Please feel free to do so 🚀
 
 - [ ] Fix off center layouts
 - [ ] Add a way for forms to be centered i.e. devise forms
-- [ ] Implement color scheme similar to Simmple.CSS 
+- [ ] Implement color scheme similar to Simple.CSS 
 - [ ] Implement dark/light modes 
 - [ ] Add the footer styling
+- [ ] Add color theme options including original Simple.CSS Dark & Light themes
