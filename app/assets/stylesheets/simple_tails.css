@@ -1,7 +1,7 @@
 @layer base {
 
   html {
-    @apply text-[18.4px];
+    @apply text-[18.4px] scroll-smooth;
   }
 
   body {
@@ -53,7 +53,7 @@
 
   }
 
-  .prose main {
+   main {
     @apply mt-12;
   }
 
