@@ -1,4 +1,5 @@
-  <div class="w-3/5 flex flex-col mt-12 bg-gray-800 rounded-3xl p-3 shadow-lg shadow-black">
+  
+<div class="w-3/5 flex flex-col mt-12 bg-gray-800 rounded-3xl p-3 shadow-lg shadow-black">
   <div
     data-controller="animated-number"
     data-animated-number-start-value="0"
@@ -6,11 +7,9 @@
     data-animated-number-duration-value="3000000"
     class="ml-2 text-4xl font-bold text-gray-300 flex justify-center "
   >0</div>
-    <p class="flex text-center"> Stimulus works if this counter is incrementing</p>
-  </div>
-
-
-<h2 class="font-extralight">Basic Typography gdfs</h2>
+  <p class="flex text-center"> Stimulus works if this counter is incrementing</p>
+</div>
+<h2 class="font-extralight">Basic Typography</h2>
 <hr>
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
@@ -19,7 +18,7 @@
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 <figure>
-      <pre class="highlight">
+  <pre class="highlight">
 <code>&lth1>Heading 1&lt;h1>
 &lth2>Heading 2&lt;h2>
 &lth3>Heading 3&lt;h3>
@@ -49,7 +48,7 @@
     <mark>this text is highlighted</mark>
   </li>
   <li>Some inline code
-    <code>rails new my_app -d postgresql</code>
+    <code>rails new simple_tails -d postgresql</code>
   </li>
 </ul>
 <ol>
@@ -63,7 +62,7 @@
   &lt;li>&lt;em>I am italic&lt;em>&lt;li>
   &lt;li>&lt;u>I am underlined&lt;u>&lt;li>
   &lt;li>Let's highlight some text; &lt;mark>this text is highlighted&lt;mark>&lt;li>
-  &lt;li>Some inline code &lt;code>rails new my_app -d postgresql&lt;code>&lt;li>
+  &lt;li>Some inline code &lt;code>rails new simple_tails -d postgresql&lt;code>&lt;li>
 &lt;ul>
 
 &lt;ol>
@@ -76,18 +75,18 @@
 <h2 class="font-extralight">Tables</h2>
 <table>
   <thead>
-  <tr>
-    <th>Name</th>
-    <th>Number</th>
-  </tr>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
   </thead>
   <tbody>
-  <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
-    <tr>
-      <td>  <%= name %></td>
-      <td><%= rand(99999) %></td>
-    </tr>
-  <% end %>
+    <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
+      <tr>
+        <td>  <%= name %></td>
+        <td><%= rand(99999) %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 <pre class="highlight">
@@ -112,9 +111,7 @@
 <br>
 <hr>
 <h2 class="font-extralight">Images</h2>
-
 <%= vite_image_tag("/app/assets/images/Ruby_On_Rails_Logo.svg", alt: "Ruby on Rails Logo") %>
-
 <figure>
   <%= vite_image_tag("/app/assets/images/twin-rails.jpg", alt: "Photo of twin rails") %>
   <figcaption>Twin rails</figcaption>
@@ -250,4 +247,3 @@
   <%= form.button "Clear" %>
   <%= form.button "Disabled", disabled: true %>`
 <% end %>
-
