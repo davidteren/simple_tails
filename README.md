@@ -13,7 +13,7 @@ This makes it possible to have default styling out the box.
 
 
 <details>
-  <summary>📘 Typography Example  <p> <h2>    ⤴</h2> Click to view </p>  </summary>
+  <summary>📘 <h2>Typography Example </h2> <p> Click to view </p>  </summary>
 
 HTML heading tags and unordered lists
 
