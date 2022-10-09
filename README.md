@@ -228,11 +228,22 @@ All the magic is here: [simple_tails.css](app/assets/stylesheets/simple_tails.cs
 
 1. Copy the [simple_tails.css](app/assets/stylesheets/simple_tails.css) file found in this project to your app.
 2. In your `application.css` import that file. 
+3. Copy the color scheme you want from `app/assets/stylesheets/custome_colors` to your app or copy them all and switch between them by uncommenting the one you want to use. 
 
 ```css
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+
+/*Select the theme you want to use by uncommenting */
+/*@import "./custom_colors/amber.css";*/
+/*@import "./custom_colors/blue.css";*/
+...
+@import "./custom_colors/slate.css";
+...
+/*@import "./custom_colors/yellow.css";*/
+
 
 @import "./simple_tails.css";
 ```
