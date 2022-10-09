@@ -244,7 +244,6 @@ All the magic is here: [simple_tails.css](app/assets/stylesheets/simple_tails.cs
 ...
 /*@import "./custom_colors/yellow.css";*/
 
-
 @import "./simple_tails.css";
 ```
 
