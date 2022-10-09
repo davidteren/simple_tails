@@ -5,7 +5,7 @@
   }
 
   body {
-    @apply m-0 grid bg-gray-900;
+    @apply m-0 grid bg-theme-bg;
     grid-template-columns: 1fr min(45rem, 90%) 1fr;
   }
 
@@ -20,7 +20,7 @@
     prose-headings:break-words
     prose-headings:font-semibold
     prose-headings:leading-tight
-    prose-headings:text-white
+    prose-headings:text-theme-text
     prose-h1:sm:text-[3rem]
     prose-h1:text-[2.5rem]
     prose-h2:sm:text-[2.6rem]
@@ -31,26 +31,29 @@
     prose-h4:sm:text-[1.25rem]
     prose-h5:text-[1.15rem]
     prose-h6:text-[0.96rem]
-    prose-p:text-white
+    prose-p:text-theme-text
     prose-a:text-blue-600
     prose-blockquote:mx-24
     prose-blockquote:font-extralight
-    prose-blockquote:text-white
+    prose-blockquote:text-theme-text
     prose-figcaption:text-center
-    prose-strong:text-white
-    prose-code:bg-gray-800
+    prose-strong:text-theme-text
     prose-code:font-mono
     prose-code:font-extralight
-    prose-code:text-gray-300
+    prose-code:text-theme-text-light
+    prose-pre:bg-theme-accent-bg
+
     prose-pre:font-mono
     prose-pre:font-extralight
-    prose-pre:text-gray-400
-    prose-ol:text-gray-300
-    prose-ul:text-gray-300
-    prose-table:text-gray-300
+    prose-pre:text-theme-code
+    prose-pre:border
+    prose-pre:border-[1px]
+    prose-pre:border-theme-border
+    prose-ol:text-theme-text-light
+    prose-ul:text-theme-text-light
+    prose-table:text-theme-text-light
     prose-img:mx-auto
     prose-hr:my-0;
-
   }
 
    main {
@@ -71,7 +74,7 @@
   }
 
   .simple-tails nav {
-    @apply mt-4 flex flex-col  text-xl  sm:mx-12 sm:flex-row sm:justify-between sm:text-2xl;
+    @apply mt-4 flex flex-col text-xl sm:mx-12 sm:flex-row sm:justify-between sm:text-2xl;
   }
 
   .simple-tails label {
@@ -98,17 +101,17 @@
   .simple-tails input[type="time"],
   .simple-tails input[type="url"],
   .simple-tails input[type="week"] {
-    @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
-    text-white md:w-3/5;
+    @apply w-full rounded-md border-[1px] border-theme-border bg-theme-accent-bg py-2 px-4
+    text-theme-text md:w-3/5;
   }
 
   input[type="submit"] {
-    @apply w-full rounded-md border-2 border-gray-800 bg-gray-800 py-2 px-4
-    text-white md:w-3/5;
+    @apply w-full rounded-md border-2 border-theme-border bg-theme-accent-bg py-2 px-4
+    text-theme-text md:w-3/5;
   }
 
   .simple-tails label {
-    @apply text-white;
+    @apply text-theme-text;
   }
 
   ::-webkit-calendar-picker-indicator {
@@ -117,16 +120,16 @@
 
   .simple-tails button,
   .simple-tails input[type="submit"] {
-    @apply my-2 mx-1 rounded bg-gray-300 py-3 px-4 text-center font-sans text-base
-    text-neutral-800 hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
+    @apply my-2 mx-1 rounded bg-theme-accent py-3 px-4 text-center font-sans text-theme-bg
+     hover:bg-gray-400 focus:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50;
   }
 
   .simple-tails .radio-group p {
-    @apply flex items-center -my-1 text-white;
+    @apply -my-1 flex items-center text-theme-text;
   }
 
   .simple-tails .radio-group-name {
-    @apply text-white;
+    @apply text-theme-text;
   }
 
   .simple-tails .radio-group label {
@@ -134,7 +137,7 @@
   }
 
   .simple-tails .checkbox-group p {
-    @apply flex items-center -my-1 mb-6 ;
+    @apply -my-1 mb-6 flex items-center;
   }
 
   .simple-tails .checkbox-group label {
@@ -155,73 +158,44 @@
   input:disabled,
   textarea:disabled,
   select:disabled {
-    @apply cursor-not-allowed bg-gray-700 !important;;
+    @apply cursor-not-allowed bg-theme-accent-bg !important;;
   }
 
   body > header {
-    @apply bg-gray-800 border-b-[1px] border-gray-500 text-center px-2 pb-8;
+    @apply bg-theme-accent-bg border-b-[1px] border-gray-500 text-center px-2 pb-8;
     grid-column: 1 / -1;
   }
 
   body > header h1 {
-    @apply max-w-screen-xl mx-auto my-4 text-white text-[3rem] font-bold;
+    @apply max-w-screen-xl mx-auto my-4 text-theme-text text-[3rem] font-bold;
   }
 
   body > header p {
-    @apply max-w-2xl mx-auto my-4 text-white text-xl;
+    @apply mx-auto my-4 max-w-2xl text-xl text-theme-text;
   }
 
   /* Format navigation */
   header > nav {
-    @apply max-w-screen-xl mx-auto my-4 text-white;
-
+    @apply mx-auto my-4 max-w-screen-xl;
   }
 
-
-  /* Use flexbox to allow items to wrap, as needed */
-  header > nav ul,
-  header > nav ol,
-  header > nav > form {
-    align-content: space-around;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* List items are inline elements, make them behave more like blocks */
-  header > nav ul li,
-  header > nav ol li,
-  header > nav > form  {
-    display: inline-block;
-  }
 
   header > nav a,
   header > nav a:visited,
   header > nav > form  {
-    margin: 0 0.5rem 1rem 0.5rem;
-    border: 1px solid gray;
-    border-radius: 5px;
-    color: white;
-    display: inline-block;
-    padding: 0.1rem 1rem;
-    text-decoration: none;
+    @apply text-theme-text mx-2 mb-4  py-[.1rem] px-4 rounded-md border-[1px] border-theme-border inline-block no-underline;
   }
 
   header > nav a:hover,
   header > nav > form:hover {
-    @apply brightness-150 cursor-pointer;
+    @apply cursor-pointer brightness-150;
   }
 
   /* Reduce nav side on mobile */
   @media only screen and (max-width: 720px) {
     header > nav a,
     header > nav > form > button{
-      @apply border-none p-0 underline leading-3;
+      @apply border-none p-0 leading-3 underline;
     }
   }
 }

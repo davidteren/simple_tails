@@ -1,4 +1,3 @@
-
 <h2 class="font-extralight">Basic Typography</h2>
 <hr>
 <h1>Heading 1</h1>
@@ -15,37 +14,37 @@
 &lth4>Heading 4&lt;h4>
 &lth5>Heading 5&lt;h5>
 &lth6>Heading 6&lt;h6></code></pre>
-	<figcaption class="-mt-4 ">
-		<a href="https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder" target="_blank">Code
-			examples require entity encoding.</a>
-	</figcaption>
+  <figcaption class="-mt-4 ">
+    <a href="https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder" target="_blank">Code
+      examples require entity encoding.</a>
+  </figcaption>
 </figure>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid, aperiam culpa ducimus eaque, earum et eum
-	ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.</p>
+  ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.</p>
 <pre class="highlight">
 </code>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid, aperiam culpa ducimus eaque, earum et eum ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.&lt;/p></code></pre>
 <ul>
-	<li>
-		<strong>I am bold</strong>
-	</li>
-	<li>
-		<em>I am italic</em>
-	</li>
-	<li>
-		<u>I am underlined</u>
-	</li>
-	<li>
-		Let's highlight some text;
-		<mark>this text is highlighted</mark>
-	</li>
-	<li>Some inline code
-		<code>rails new simple_tails -d postgresql</code>
-	</li>
+  <li>
+    <strong>I am bold</strong>
+  </li>
+  <li>
+    <em>I am italic</em>
+  </li>
+  <li>
+    <u>I am underlined</u>
+  </li>
+  <li>
+    Let's highlight some text;
+    <mark>this text is highlighted</mark>
+  </li>
+  <li>Some inline code
+    <code>rails new simple_tails -d postgresql</code>
+  </li>
 </ul>
 <ol>
-	<li>Number one</li>
-	<li>Number two</li>
-	<li>Number three</li>
+  <li>Number one</li>
+  <li>Number two</li>
+  <li>Number three</li>
 </ol>
 <pre class="highlight">
 <code>&lt;ul>
@@ -64,20 +63,20 @@
 <hr>
 <h2 class="font-extralight">Tables</h2>
 <table>
-	<thead>
-	<tr>
-		<th>Name</th>
-		<th>Number</th>
-	</tr>
-	</thead>
-	<tbody>
-	<% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
-		<tr>
-			<td>  <%= name %></td>
-			<td><%= rand(99999) %></td>
-		</tr>
-	<% end %>
-	</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
+      <tr>
+        <td>  <%= name %></td>
+        <td><%= rand(99999) %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 <pre class="highlight">
 <code>&lt;table&gt;
@@ -103,8 +102,8 @@
 <h2 class="font-extralight">Images</h2>
 <%= vite_image_tag("/app/assets/images/Ruby_On_Rails_Logo.svg", alt: "Ruby on Rails Logo") %>
 <figure>
-	<%= vite_image_tag("/app/assets/images/twin-rails.jpg", alt: "Photo of twin rails") %>
-	<figcaption>Twin rails</figcaption>
+  <%= vite_image_tag("/app/assets/images/twin-rails.jpg", alt: "Photo of twin rails") %>
+  <figcaption>Twin rails</figcaption>
 </figure>
 <pre class="highlight">
 <code>&lt;%= vite_image_tag(&quot;/app/assets/images/Ruby_On_Rails_Logo.svg&quot;, alt: &quot;Ruby on Rails Logo&quot;) %&gt;
@@ -118,11 +117,11 @@
 <hr>
 <h2 class="font-extralight">Search</h2>
 <%= form_with url: "/", method: :get do |form| %>
-	<p>
-		<%= form.label :query, "Search for:" %>
-		<%= form.text_field :query %>
-		<%= form.button "Search" %>
-	</p>
+  <p>
+    <%= form.label :query, "Search for:" %>
+    <%= form.text_field :query %>
+    <%= form.button "Search" %>
+  </p>
 <% end %>
 <pre class="highlight">
 <code>&lt;%= form_with url: &quot;/&quot;, method: :get do |form| %&gt;
@@ -135,105 +134,105 @@
 <hr class="my-12">
 <h2 class="font-extralight">Forms</h2>
 <%= form_with url: "/", method: :get do |form| %>
-	<p>
-		<%= form.label :title %>
-		<%= form.select :desired_attribute, %w(Mr Miss Mrs Other) %>
-	</p>
-	<p>
-		<%= form.label :first_name %>
-		<%= form.text_field :first_name %>
-	</p>
-	<p>
-		<%= form.label :surname %>
-		<%= form.text_field :surname %>
-	</p>
-	<p>
-		<%= form.label :email %>
-		<%= form.email_field :email %>
-	</p>
-	<p>
-		<%= form.label :telephone %>
-		<%= form.telephone_field :telephone %>
-	</p>
-	<div data-controller="character-counter">
-		<p>
-			<%= form.label :message %>
-			<%= form.text_area :message, rows: 6, data: {character_counter_target: :input} %>
-		</p>
-		<div class=" -mt-5 max-w-2xl flex justify-end text-white font-light text-sm">
-			<span class="mr-1 text-[18px]" data-character-counter-target="counter"></span> characters
-		</div>
-	</div>
-	<p>
-		<%= form.label :url %>
-		<%= form.url_field :url %>
-	</p>
-	<p>
-		<%= form.label :date %>
-		<%= form.date_field :date %>
-	</p>
-	<p>
-		<%= form.label :datetime %>
-		<%= form.datetime_field :datetime %>
-	</p>
-	<p>
-		<%= form.label :month %>
-		<%= form.month_field :month %>
-	</p>
-	<p>
-		<%= form.label :week %>
-		<%= form.week_field :week %>
-	</p>
-	<p>
-		<%= form.label :time %>
-		<%= form.time_field :time %>
-	</p>
-	<p>
-		<%= form.label :price %>
-		<%= form.number_field :price, in: 1.0 .. 20.0, step: 0.5 %>
-	</p>
-	<p>
-		<%= form.label :color %>
-		<%= form.color_field :color, class: "h-12" %>
-	</p>
-	<p>
-		<%= form.label :range %>
-		<%= form.range_field :range, in: 1.0 .. 20.0, step: 0.5 %>
-	</p>
-	<label class="radio-group-name">Age:</label>
-	<div class="radio-group">
-		<p>
-			<%= form.radio_button :age, "child" %>
-			<%= form.label :age_child, "I am younger than 21" %>
-		</p>
-		<p>
-			<%= form.radio_button :age, "adult" %>
-			<%= form.label :age_adult, "I am over 21" %>
-		</p>
-		<p>
-			<%= form.radio_button :age, "eternal", disabled: true %>
-			<%= form.label :age_adult, "I am eternal" %>
-		</p>
-	</div>
-	<p>
-		<%= form.label :select_one_or_more %>
-		<% @cities = [
+  <p>
+    <%= form.label :title %>
+    <%= form.select :desired_attribute, %w(Mr Miss Mrs Other) %>
+  </p>
+  <p>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </p>
+  <p>
+    <%= form.label :surname %>
+    <%= form.text_field :surname %>
+  </p>
+  <p>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </p>
+  <p>
+    <%= form.label :telephone %>
+    <%= form.telephone_field :telephone %>
+  </p>
+  <div data-controller="character-counter">
+    <p>
+      <%= form.label :message %>
+      <%= form.text_area :message, rows: 6, data: {character_counter_target: :input} %>
+    </p>
+    <div class=" -mt-5 max-w-2xl flex justify-end text-white font-light text-sm">
+      <span class="mr-1 text-[18px]" data-character-counter-target="counter"></span> characters
+    </div>
+  </div>
+  <p>
+    <%= form.label :url %>
+    <%= form.url_field :url %>
+  </p>
+  <p>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </p>
+  <p>
+    <%= form.label :datetime %>
+    <%= form.datetime_field :datetime %>
+  </p>
+  <p>
+    <%= form.label :month %>
+    <%= form.month_field :month %>
+  </p>
+  <p>
+    <%= form.label :week %>
+    <%= form.week_field :week %>
+  </p>
+  <p>
+    <%= form.label :time %>
+    <%= form.time_field :time %>
+  </p>
+  <p>
+    <%= form.label :price %>
+    <%= form.number_field :price, in: 1.0 .. 20.0, step: 0.5 %>
+  </p>
+  <p>
+    <%= form.label :color %>
+    <%= form.color_field :color, class: "h-12" %>
+  </p>
+  <p>
+    <%= form.label :range %>
+    <%= form.range_field :range, in: 1.0 .. 20.0, step: 0.5 %>
+  </p>
+  <label class="radio-group-name">Age:</label>
+  <div class="radio-group">
+    <p>
+      <%= form.radio_button :age, "child" %>
+      <%= form.label :age_child, "I am younger than 21" %>
+    </p>
+    <p>
+      <%= form.radio_button :age, "adult" %>
+      <%= form.label :age_adult, "I am over 21" %>
+    </p>
+    <p>
+      <%= form.radio_button :age, "eternal", disabled: true %>
+      <%= form.label :age_adult, "I am eternal" %>
+    </p>
+  </div>
+  <p>
+    <%= form.label :select_one_or_more %>
+    <% @cities = [
 			{id: 1, name: "Berlin"},
 			{id: 2, name: "Chicago"},
 			{id: 3, name: "Madrid"},
 			{id: 4, name: "Cape Town"}
 		].collect { |u| [u[:name], u[:id]] } %>
-		<%= select_tag :city,
+    <%= select_tag :city,
 			options_for_select(@cities),
 			multiple: true %>
-	</p>
-	<div class="checkbox-group">
-		<p>
-			<%= form.check_box :agree_to_terms %>
-			<label for="agree_to_terms"> I agree to the <a href="#">terms and conditions</a></label>
-		</p>
-	</div>
-	<%= form.button %>
-	<%= form.button "Clear" %>
-	<%= form.button "Disabled", disabled: true %>`
+  </p>
+  <div class="checkbox-group">
+    <p>
+      <%= form.check_box :agree_to_terms %>
+      <label for="agree_to_terms"> I agree to the <a href="#">terms and conditions</a></label>
+    </p>
+  </div>
+  <%= form.button %>
+  <%= form.button "Clear" %>
+  <%= form.button "Disabled", disabled: true %>`
 <% end %>

@@ -60,7 +60,7 @@ A table with just enough styling can be rendered from something like this
   <tbody>
     <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
       <tr>
-        <td>  <%= name %></td>
+        <td><%= name %></td>
         <td><%= rand(99999) %></td>
       </tr>
     <% end %>
