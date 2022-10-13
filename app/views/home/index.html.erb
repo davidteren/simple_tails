@@ -199,8 +199,17 @@
     <%= form.label :range %>
     <%= form.range_field :range, in: 1.0 .. 20.0, step: 0.5 %>
   </p>
-  <label class="radio-group-name">Age:</label>
-  <div class="radio-group">
+  <%= field_set_tag "Which are better cats or corgis?", class: 'radio-group' do %>
+    <p>
+      <%= form.radio_button :animal, "Cats" %>
+      <%= form.label :animal_cats, "Cats" %>
+    </p>
+    <p>
+      <%= form.radio_button :animal, "Corgis" %>
+      <%= form.label :animal_corgis, "Corgis" %>
+    </p>
+  <% end %>
+  <%= field_set_tag "Age:", class: 'radio-group' do %>
     <p>
       <%= form.radio_button :age, "child" %>
       <%= form.label :age_child, "I am younger than 21" %>
@@ -211,9 +220,9 @@
     </p>
     <p>
       <%= form.radio_button :age, "eternal", disabled: true %>
-      <%= form.label :age_adult, "I am eternal" %>
+      <%= form.label :age_eternal, "I am imortal" %>
     </p>
-  </div>
+  <% end %>
   <p>
     <%= form.label :select_one_or_more %>
     <% @cities = [
