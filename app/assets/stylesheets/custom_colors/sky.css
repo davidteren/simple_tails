@@ -1,16 +1,10 @@
 @layer base {
-
   :root {
-    --bg: theme("colors.sky.900");
-    --accent-bg: theme("colors.sky.800");
-    --text: theme("colors.sky.50");
-    --text-light: theme("colors.sky.100");
-    --border: theme("colors.sky.300");
-    --accent: theme("colors.lime.400");
-    --code: theme("colors.sky.500");
-    --preformatted: theme("colors.sky.400");
-    --marked: theme("colors.orange.300");
-    --disabled: theme("colors.sky.800");
+    --theme-h: 230;
+    --theme-c: 0.028;
+    --accent-h: 230;
+    --accent-c: 0.13;
+    --accent-l: 0.5;
+    --accent-text-l: 0.99;
   }
 }
-

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>SimpleTails</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,28 +10,33 @@
     <%= vite_javascript_tag 'application' %>
   </head>
   <body>
+    <a class="skip-link" href="#content">Skip to content</a>
     <header>
-      <nav>
-        <%= link_to "Home", "/"%>
-        <%= link_to "Services", "#" %>
-        <%= link_to "Blog", posts_path %>
-        <%= link_to "About", "#" %>
-        <%= link_to "Contact", "#" %>
+      <nav aria-label="Primary">
+        <%= link_to "Home", root_path, "aria-current": ("page" if current_page?(root_path)) %>
+        <%= link_to "Blog", posts_path, "aria-current": ("page" if controller_name == "posts") %>
         <% if user_signed_in? %>
-          <%= link_to "Account", edit_user_registration_path %>
-          <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete } %>
+          <%= link_to "Account", edit_user_registration_path, "aria-current": ("page" if controller_name == "registrations") %>
+          <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
         <% else %>
-          <%= link_to "Sign Up", new_user_registration_path %>
-          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Sign up", new_user_registration_path %>
+          <%= link_to "Log in", new_user_session_path %>
         <% end %>
       </nav>
-      <h1 class="">SimpleTails</h1>
-      <p>Build fast using symantic HTML tags in Rails</p>
+      <h1>SimpleTails</h1>
+      <p>Semantic HTML in Rails, already dressed.</p>
     </header>
-    <main class="simple-tails">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <main id="content" class="simple-tails">
+      <% if notice.present? %>
+        <p class="notice" role="status"><%= notice %></p>
+      <% end %>
+      <% if alert.present? %>
+        <p class="alert" role="alert"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </main>
+    <footer>
+      <p>Copy one stylesheet. Headings, forms, and tables pick up the rest.</p>
+    </footer>
   </body>
 </html>

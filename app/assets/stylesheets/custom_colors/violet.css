@@ -1,15 +1,10 @@
 @layer base {
-
   :root {
-    --bg: theme("colors.violet.900");
-    --accent-bg: theme("colors.violet.800");
-    --text: theme("colors.violet.50");
-    --text-light: theme("colors.violet.100");
-    --border: theme("colors.violet.300");
-    --accent: theme("colors.amber.400");
-    --code: theme("colors.violet.500");
-    --preformatted: theme("colors.violet.400");
-    --marked: theme("colors.rose.300");
-    --disabled: theme("colors.violet.800");
+    --theme-h: 300;
+    --theme-c: 0.03;
+    --accent-h: 300;
+    --accent-c: 0.15;
+    --accent-l: 0.5;
+    --accent-text-l: 0.99;
   }
 }

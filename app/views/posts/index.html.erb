@@ -1,11 +1,19 @@
-<p style="color: green"><%= notice %></p>
 <h1>Posts</h1>
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-<%= link_to "New post", new_post_path %>
+
+<% if @posts.any? %>
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    <% end %>
+  </div>
+  <p><%= link_to "New post", new_post_path, class: "button" %></p>
+<% else %>
+  <div class="empty-state">
+    <h2>No posts yet</h2>
+    <p>Write the first one. The list will land here.</p>
+    <p><%= link_to "New post", new_post_path, class: "button" %></p>
+  </div>
+<% end %>

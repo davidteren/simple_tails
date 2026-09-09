@@ -1,4 +1,6 @@
-<h2 class="font-extralight">Basic Typography</h2>
+<p>This page is the living sample. The tags below carry no extra classes.</p>
+
+<h2>Typography</h2>
 <hr>
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
@@ -7,22 +9,19 @@
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 <figure>
-  <pre class="highlight">
-<code>&lth1>Heading 1&lt;h1>
-&lth2>Heading 2&lt;h2>
-&lth3>Heading 3&lt;h3>
-&lth4>Heading 4&lt;h4>
-&lth5>Heading 5&lt;h5>
-&lth6>Heading 6&lt;h6></code></pre>
-  <figcaption class="-mt-4 ">
-    <a href="https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder" target="_blank">Code
-      examples require entity encoding.</a>
+  <pre class="highlight"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+  <figcaption>
+    <a href="https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder" target="_blank" rel="noreferrer">Code examples need entity encoding.</a>
   </figcaption>
 </figure>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid, aperiam culpa ducimus eaque, earum et eum
   ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.</p>
-<pre class="highlight">
-</code>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid, aperiam culpa ducimus eaque, earum et eum ex laudantium maiores minus nemo nobis non nostrum quisquam, recusandae totam vitae voluptatem.&lt;/p></code></pre>
+<pre class="highlight"><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</code></pre>
 <ul>
   <li>
     <strong>I am bold</strong>
@@ -46,22 +45,20 @@
   <li>Number two</li>
   <li>Number three</li>
 </ol>
-<pre class="highlight">
-<code>&lt;ul>
-  &lt;li>&lt;strong>I am bold&lt;strong>&lt;li>
-  &lt;li>&lt;em>I am italic&lt;em>&lt;li>
-  &lt;li>&lt;u>I am underlined&lt;u>&lt;li>
-  &lt;li>Let's highlight some text; &lt;mark>this text is highlighted&lt;mark>&lt;li>
-  &lt;li>Some inline code &lt;code>rails new simple_tails -d postgresql&lt;code>&lt;li>
-&lt;ul>
-&lt;ol>
-  &lt;li>Number one&lt;li>
-  &lt;li>Number two&lt;li>
-  &lt;li>Number three&lt;li>
-&lt;ol></code></pre>
-<br>
-<hr>
-<h2 class="font-extralight">Tables</h2>
+<pre class="highlight"><code>&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;I am bold&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;I am italic&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;I am underlined&lt;/u&gt;&lt;/li&gt;
+  &lt;li&gt;Let's highlight some text; &lt;mark&gt;this text is highlighted&lt;/mark&gt;&lt;/li&gt;
+  &lt;li&gt;Some inline code &lt;code&gt;rails new simple_tails -d postgresql&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Number one&lt;/li&gt;
+  &lt;li&gt;Number two&lt;/li&gt;
+  &lt;li&gt;Number three&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+<h2>Tables</h2>
 <table>
   <thead>
     <tr>
@@ -72,14 +69,13 @@
   <tbody>
     <% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %>
       <tr>
-        <td>  <%= name %></td>
+        <td><%= name %></td>
         <td><%= rand(99999) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<pre class="highlight">
-<code>&lt;table&gt;
+<pre class="highlight"><code>&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Name&lt;/th&gt;
@@ -89,83 +85,80 @@
   &lt;tbody&gt;
     &lt;% %w(John Sally Mary Peter Simon James).shuffle.each do |name| %&gt;
       &lt;tr&gt;
-        &lt;td&gt;
-          &lt;%= name %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= name %&gt;&lt;/td&gt;
         &lt;td&gt;&lt;%= rand(99999) %&gt;&lt;/td&gt;
       &lt;/tr&gt;
     &lt;% end %&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
-<br>
-<hr>
-<h2 class="font-extralight">Images</h2>
-<%= vite_image_tag("/app/assets/images/Ruby_On_Rails_Logo.svg", alt: "Ruby on Rails Logo") %>
+&lt;/table&gt;</code></pre>
+
+<h2>Images</h2>
+<%= vite_image_tag("/app/assets/images/Ruby_On_Rails_Logo.svg", alt: "Ruby on Rails logo") %>
 <figure>
-  <%= vite_image_tag("/app/assets/images/twin-rails.jpg", alt: "Photo of twin rails") %>
+  <%= vite_image_tag("/app/assets/images/twin-rails.jpg", alt: "Twin rails running toward the horizon") %>
   <figcaption>Twin rails</figcaption>
 </figure>
-<pre class="highlight">
-<code>&lt;%= vite_image_tag(&quot;/app/assets/images/Ruby_On_Rails_Logo.svg&quot;, alt: &quot;Ruby on Rails Logo&quot;) %&gt;
+<pre class="highlight"><code>&lt;%= vite_image_tag("/app/assets/images/Ruby_On_Rails_Logo.svg", alt: "Ruby on Rails logo") %&gt;
 
 &lt;figure&gt;
-  &lt;%= vite_image_tag(&quot;/app/assets/images/twin-rails.jpg&quot;, alt: &quot;Photo of twin rails&quot;) %&gt;
+  &lt;%= vite_image_tag("/app/assets/images/twin-rails.jpg", alt: "Twin rails running toward the horizon") %&gt;
   &lt;figcaption&gt;Twin rails&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
-<br>
-<hr>
-<h2 class="font-extralight">Search</h2>
+&lt;/figure&gt;</code></pre>
+
+<h2>Search</h2>
 <%= form_with url: "/", method: :get do |form| %>
   <p>
-    <%= form.label :query, "Search for:" %>
-    <%= form.text_field :query %>
+    <%= form.label :query, "Search" %>
+    <%= form.search_field :query, spellcheck: false, autocomplete: "off" %>
+  </p>
+  <p>
     <%= form.button "Search" %>
   </p>
 <% end %>
-<pre class="highlight">
-<code>&lt;%= form_with url: &quot;/&quot;, method: :get do |form| %&gt;
+<pre class="highlight"><code>&lt;%= form_with url: "/", method: :get do |form| %&gt;
   &lt;p&gt;
-    &lt;%= form.label :query, &quot;Search for:&quot; %&gt;
-    &lt;%= form.text_field :query %&gt;
-    &lt;%= form.button &quot;Search&quot; %&gt;
+    &lt;%= form.label :query, "Search" %&gt;
+    &lt;%= form.search_field :query %&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;%= form.button "Search" %&gt;
   &lt;/p&gt;
 &lt;% end %&gt;</code></pre>
-<hr class="my-12">
-<h2 class="font-extralight">Forms</h2>
+
+<h2>Forms</h2>
 <%= form_with url: "/", method: :get do |form| %>
   <p>
     <%= form.label :title %>
     <%= form.select :desired_attribute, %w(Mr Miss Mrs Other) %>
   </p>
   <p>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.label :first_name, "First name" %>
+    <%= form.text_field :first_name, autocomplete: "given-name" %>
   </p>
   <p>
     <%= form.label :surname %>
-    <%= form.text_field :surname %>
+    <%= form.text_field :surname, autocomplete: "family-name" %>
   </p>
   <p>
     <%= form.label :email %>
-    <%= form.email_field :email %>
+    <%= form.email_field :email, autocomplete: "email" %>
   </p>
   <p>
     <%= form.label :telephone %>
-    <%= form.telephone_field :telephone %>
+    <%= form.telephone_field :telephone, autocomplete: "tel" %>
   </p>
   <div data-controller="character-counter">
     <p>
       <%= form.label :message %>
       <%= form.text_area :message, rows: 6, data: {character_counter_target: :input} %>
     </p>
-    <div class=" -mt-5 max-w-2xl flex justify-end text-white font-light text-sm">
-      <span class="mr-1 text-[18px]" data-character-counter-target="counter"></span> characters
-    </div>
+    <p class="character-count">
+      <span data-character-counter-target="counter"></span> characters
+    </p>
   </div>
   <p>
     <%= form.label :url %>
-    <%= form.url_field :url %>
+    <%= form.url_field :url, spellcheck: false, autocomplete: "url" %>
   </p>
   <p>
     <%= form.label :date %>
@@ -193,13 +186,13 @@
   </p>
   <p>
     <%= form.label :color %>
-    <%= form.color_field :color, class: "h-12" %>
+    <%= form.color_field :color %>
   </p>
   <p>
     <%= form.label :range %>
     <%= form.range_field :range, in: 1.0 .. 20.0, step: 0.5 %>
   </p>
-  <%= field_set_tag "Which are better cats or corgis?", class: 'radio-group' do %>
+  <%= field_set_tag "Which are better, cats or corgis?", class: "radio-group" do %>
     <p>
       <%= form.radio_button :animal, "Cats" %>
       <%= form.label :animal_cats, "Cats" %>
@@ -209,7 +202,7 @@
       <%= form.label :animal_corgis, "Corgis" %>
     </p>
   <% end %>
-  <%= field_set_tag "Age:", class: 'radio-group' do %>
+  <%= field_set_tag "Age", class: "radio-group" do %>
     <p>
       <%= form.radio_button :age, "child" %>
       <%= form.label :age_child, "I am younger than 21" %>
@@ -220,28 +213,30 @@
     </p>
     <p>
       <%= form.radio_button :age, "eternal", disabled: true %>
-      <%= form.label :age_eternal, "I am imortal" %>
+      <%= form.label :age_eternal, "I am immortal" %>
     </p>
   <% end %>
   <p>
-    <%= form.label :select_one_or_more %>
+    <%= form.label :select_one_or_more, "Select one or more" %>
     <% @cities = [
-			{id: 1, name: "Berlin"},
-			{id: 2, name: "Chicago"},
-			{id: 3, name: "Madrid"},
-			{id: 4, name: "Cape Town"}
-		].collect { |u| [u[:name], u[:id]] } %>
+      {id: 1, name: "Berlin"},
+      {id: 2, name: "Chicago"},
+      {id: 3, name: "Madrid"},
+      {id: 4, name: "Cape Town"}
+    ].collect { |u| [u[:name], u[:id]] } %>
     <%= select_tag :city,
-			options_for_select(@cities),
-			multiple: true %>
+      options_for_select(@cities),
+      multiple: true %>
   </p>
   <div class="checkbox-group">
     <p>
       <%= form.check_box :agree_to_terms %>
-      <label for="agree_to_terms"> I agree to the <a href="#">terms and conditions</a></label>
+      <label for="agree_to_terms">I agree to the <a href="#">terms and conditions</a></label>
     </p>
   </div>
-  <%= form.button %>
-  <%= form.button "Clear" %>
-  <%= form.button "Disabled", disabled: true %>`
+  <p>
+    <%= form.button "Save" %>
+    <%= form.button "Clear", type: "reset" %>
+    <%= form.button "Disabled", disabled: true %>
+  </p>
 <% end %>

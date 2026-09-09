@@ -1,27 +1,29 @@
 <%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
-  </div>
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.datetime_field :date %>
-  </div>
-  <div>
-    <%= form.submit %>
-  </div>
+  <p>
+    <%= form.label :title %>
+    <%= form.text_field :title, aria: { invalid: post.errors[:title].any? } %>
+    <% post.errors[:title].each do |message| %>
+      <span class="field-error"><%= message %></span>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :content %>
+    <%= form.text_area :content, rows: 8, aria: { invalid: post.errors[:content].any? } %>
+    <% post.errors[:content].each do |message| %>
+      <span class="field-error"><%= message %></span>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :date %>
+    <%= form.datetime_field :date, aria: { invalid: post.errors[:date].any? } %>
+    <% post.errors[:date].each do |message| %>
+      <span class="field-error"><%= message %></span>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.submit post.persisted? ? "Save changes" : "Create post" %>
+  </p>
 <% end %>

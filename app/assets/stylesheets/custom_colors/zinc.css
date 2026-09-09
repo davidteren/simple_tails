@@ -1,15 +1,10 @@
 @layer base {
-
   :root {
-    --bg: theme("colors.zinc.900");
-    --accent-bg: theme("colors.zinc.800");
-    --text: theme("colors.zinc.50");
-    --text-light: theme("colors.zinc.100");
-    --border: theme("colors.zinc.300");
-    --accent: theme("colors.cyan.500");
-    --code: theme("colors.red.500");
-    --preformatted: theme("colors.zinc.400");
-    --marked: theme("colors.yellow.300");
-    --disabled: theme("colors.zinc.800");
+    --theme-h: 260;
+    --theme-c: 0.008;
+    --accent-h: 25;
+    --accent-c: 0.16;
+    --accent-l: 0.5;
+    --accent-text-l: 0.99;
   }
 }

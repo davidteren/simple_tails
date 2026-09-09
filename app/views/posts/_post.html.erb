@@ -1,14 +1,9 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
-  <p>
-    <strong>Content:</strong>
-    <%= post.content %>
-  </p>
-  <p>
-    <strong>Date:</strong>
-    <%= post.date %>
-  </p>
+  <h2><%= post.title %></h2>
+  <% if post.date.present? %>
+    <p class="post-meta">
+      <time datetime="<%= post.date.iso8601 %>"><%= post.date.to_fs(:long) %></time>
+    </p>
+  <% end %>
+  <p><%= post.content %></p>
 </div>

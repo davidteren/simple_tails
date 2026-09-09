@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
     content: [
         './app/helpers/**/*.rb',
@@ -12,12 +9,41 @@ module.exports = {
         './app/frontend/**/*.{vue,js,ts,jsx,tsx}',
         './app/**/*.{vue,js,ts,jsx,tsx}',
     ],
+    safelist: [
+        'font-extralight',
+        'font-extrabold',
+        'text-red-500',
+        'text-pink-600',
+        'text-orange-600',
+        'text-sm',
+        'text-3xl',
+    ],
     theme: {
         fontFamily: {
-            'sans': ["BlinkMacSystemFont", "Avenir Next", "Avenir",
-                "Nimbus Sans L", "Roboto", "Noto Sans", "Segoe UI", "Arial", "Helvetica",
-                "Helvetica Neue", "sans-serif"],
-            'mono': ["Consolas", "Menlo", "Monaco", "Andale Mono", "Ubuntu Mono", "monospace"]
+            sans: [
+                "ui-sans-serif",
+                "system-ui",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "sans-serif",
+            ],
+            serif: [
+                "Iowan Old Style",
+                "Palatino Linotype",
+                "Palatino",
+                "Charter",
+                "Georgia",
+                "serif",
+            ],
+            mono: [
+                "ui-monospace",
+                "SFMono-Regular",
+                "Menlo",
+                "Consolas",
+                "monospace",
+            ],
         },
         extend: {
             colors: {
@@ -28,9 +54,12 @@ module.exports = {
                     'text-light': 'var(--text-light)',
                     border: 'var(--border)',
                     accent: 'var(--accent)',
+                    'accent-text': 'var(--accent-text)',
                     code: 'var(--code)',
-                    preformatted: 'var(--pre)',
+                    preformatted: 'var(--preformatted)',
                     disabled: 'var(--disabled)',
+                    focus: 'var(--focus)',
+                    danger: 'var(--danger)',
                 }
             }
         },

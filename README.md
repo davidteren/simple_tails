@@ -240,7 +240,7 @@ All the magic is here: [simple_tails.css](app/assets/stylesheets/simple_tails.cs
 /*@import "./custom_colors/amber.css";*/
 /*@import "./custom_colors/blue.css";*/
 ...
-@import "./custom_colors/slate.css";
+@import "./custom_colors/stone.css";
 ...
 /*@import "./custom_colors/yellow.css";*/
 
