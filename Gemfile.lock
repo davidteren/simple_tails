@@ -135,6 +135,8 @@ GEM
     nio4r (2.7.5)
     nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.19.4-x86_64-linux-gnu)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.3)
     public_suffix (5.0.0)
@@ -234,6 +236,7 @@ GEM
 PLATFORMS
   arm64-darwin-21
   arm64-darwin-25
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -256,7 +259,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.3.6p108
+   ruby 3.3.13p207
 
 BUNDLED WITH
    2.5.23
